@@ -13,9 +13,6 @@ public class PowerManagementProvider extends BroadcastReceiver {
     public static String EXTRA_INTENT_BATTERY_ACTION = "com.azmi.batterywidgetjv.UPDATE_WIDGET";
     public static String EXTRA_INTENT_BATTERY_LEVEL = "com.azmi.batterywidgetjv.level";
     public static String EXTRA_INTENT_BATTERY_CHARGING = "com.azmi.batterywidgetjv.charging";
-    public PowerManagementProvider(IPowerManagementResultListener listener) {
-        this.listener = listener;
-    }
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -40,5 +37,9 @@ public class PowerManagementProvider extends BroadcastReceiver {
 
         // Send the broadcast to the AppWidgetProvider
         context.sendBroadcast(updateIntent);
+    }
+
+    public void setListener(IPowerManagementResultListener listener) {
+        this.listener = listener;
     }
 }

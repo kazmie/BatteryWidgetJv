@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity implements IPowerManagementR
 
         tvLevel = findViewById(R.id.tvLevel);
         tvStatus = findViewById(R.id.tvStatus);
-        PowerManagementProvider broadcastReceiver = new PowerManagementProvider(this);
+        PowerManagementProvider broadcastReceiver = new PowerManagementProvider();
+        broadcastReceiver.setListener(this);
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         this.registerReceiver(broadcastReceiver, intentFilter);
     }

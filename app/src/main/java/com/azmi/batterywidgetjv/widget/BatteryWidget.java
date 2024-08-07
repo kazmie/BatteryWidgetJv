@@ -20,7 +20,7 @@ import com.azmi.batterywidgetjv.utils.Log;
 public class BatteryWidget extends AppWidgetProvider {
 
     private Context context;
-    PowerManagementProvider broadcastReceiver = new PowerManagementProvider(null);
+    PowerManagementProvider broadcastReceiver = new PowerManagementProvider();
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId, Float level, boolean isCharging) {
 
