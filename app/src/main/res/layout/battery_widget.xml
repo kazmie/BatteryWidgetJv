@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:paddingTop="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Battery Info"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+
+        android:text="0 %"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/imgCharging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plug_in"
+        android:scaleType="fitCenter"/>
+    <!--    <TextView-->
+<!--        android:id="@+id/appwidget_status"-->
+<!--        android:layout_below="@id/appwidget_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+
+<!--        android:text="-"-->
+<!--        android:textSize="12dp"-->
+<!--        android:textStyle="bold" />-->
+</LinearLayout>
