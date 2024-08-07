@@ -37,11 +37,8 @@ public class MainActivity extends AppCompatActivity implements IPowerManagementR
     @Override
     public void PowerResult(boolean isCharging, Float level) {
         Log.d("PowerResult callback");
-        if (!isCharging) {
-            tvStatus.setText("-");
-        } else {
-            tvStatus.setText("Charging");
-        }
+        String text = isCharging ? "Charging" : "-";
+        tvStatus.setText(text);
         tvLevel.setText(level.intValue() + "%");
     }
 }
